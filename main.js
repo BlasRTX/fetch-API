@@ -5,11 +5,18 @@ const button = document.querySelector("button");
 /*Enviar la informacion relacionada al pokemon*/
 const pokemonContainer = document.querySelector(".pokemon-container");
 
-/**/
-function getPokemon() {
-    fetch('https://pokeapi.co/api/v2/ability/charmander/')
-        .then((res) => res.json)
-        .then((data) => console.log(data))
+/*Evitar recarga del buscador en HTML*/
+button.addEventListener("click", (e) => {
+    e.preventDefault();
+    getPokemon(input.value);
+});
+
+/*Obtener el resultado del pokemon seleccionado*/
+/*Utilizando la funcion fetch, obtenemos la respuesta del URL y envia una request con respuesta con la informacion*/
+function getPokemon(pokemon) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
+        .then((res) => res.json())
+        .then((data) => { createPokemon(data); });
 }
 
 
@@ -28,6 +35,20 @@ function createPokemon(pokemon) {
     div.appendChild(img);
     div.appendChild(h3);
 
+    pokemonContainer.appendChild(div);
+
 }
 
-getPokemon();
+/*Validar campos para busqueda pokemon*/
+/*En caso que la busqueda sea por medio del nombre o del numpero en la poked*/
+function validarCamposPokemon() {
+
+    let nombre = document.getElementById().value.trim('nombreP');
+
+    if (nombre != '') {
+        alert('Por favor, ingrese el pokemon a buscar.');
+    } else {
+        alert('Funciona.');
+    }
+
+}
