@@ -5,10 +5,12 @@ const button = document.querySelector("button");
 /*Enviar la informacion relacionada al pokemon*/
 const pokemonContainer = document.querySelector(".pokemon-container");
 
-/*Evitar recarga del buscador en HTML*/
+
+/*Espera/Escucha el click del boton e iniciara las funciones que debemos indicar(validar)*/
 button.addEventListener("click", (e) => {
     e.preventDefault();
     getPokemon(input.value);
+
 });
 
 
@@ -42,16 +44,4 @@ function createPokemon(pokemon) {
 
 }
 
-/*Validar campos para busqueda pokemon*/
-/*En caso que la busqueda sea por medio del nombre o del numpero en la poked*/
-function validarCamposPokemon() {
 
-    let nombre = document.getElementById().value.trim('nombreP');
-
-    if (nombre != '') {
-        alert('Por favor, ingrese el pokemon a buscar.');
-    } else {
-        alert('Funciona.');
-    }
-
-}
