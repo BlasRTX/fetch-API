@@ -2,3 +2,14 @@ html,
 body {
     height: 100%;
 }
+
+.pokemon-container {
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    margin-left: 830px;
+}

@@ -11,27 +11,30 @@ button.addEventListener("click", (e) => {
     getPokemon(input.value);
 });
 
+
 /*Obtener el resultado del pokemon seleccionado*/
 /*Utilizando la funcion fetch, obtenemos la respuesta del URL y envia una request con respuesta con la informacion*/
 function getPokemon(pokemon) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
-        .then((res) => res.json())
-        .then((data) => { createPokemon(data); });
+        .then((res) => res.json()) /*Indicar el formato para obtener la informacion*/
+        .then((data) => {
+            createPokemon(data);
+        });
 }
 
 
 /*Crear la informacion del pokemon a mostrar en pantalla, tomando los valores del JSON*/
 function createPokemon(pokemon) {
     /*Imagen del pokemon del JSON*/
-    const img = document.createElement('img');
-    img.scr = pokemon.sprites.front_default;
+    const img = document.createElement("img");
+    img.src = pokemon.sprites.front_default;
 
     /*Nombre del pokemon del JSON*/
-    const h3 = document.createElement('h3');
+    const h3 = document.createElement("h3");
     h3.textContent = pokemon.name;
 
-    /*Div*/
-    const div = document.createElement('div');
+    /*Div para juntar elementos creados*/
+    const div = document.createElement("div");
     div.appendChild(img);
     div.appendChild(h3);
 
