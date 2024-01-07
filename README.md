@@ -5,6 +5,7 @@ No siempre tenemos el tiempo o los conocimientos necesarios para crear un servic
 
 Por lo que **existen diversos servicios web públicos** desde los que podemos obtener información y así realizar esas **prácticas de consumo de API manera sencilla**, al menos sin complicarnos con la parte de desarrollar la propia API.
 
+
 ## API
 Sus siglas del inglés: **Application Programming Interfaces** (Interfaz de Programación de Aplicaciones API).
 
@@ -70,6 +71,7 @@ https://dog.ceo/dog-api/
 https://jsonplaceholder.typicode.com
 https://api.nasa.gov
 ```
+Utilizaremos el uso de Bootstrap y la **API a seleccionar** para obtener los datos.
 
 #### 1. Seleccionar API
 
